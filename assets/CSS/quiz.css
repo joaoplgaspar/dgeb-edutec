@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+body {
+    color: #fff;
+}
+
+
+
+/*======Pagina inicial Quiz======*/
+
+:root {
+    background-color: rgb(29, 26, 26);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 90%;
+    font-family: 'Nova Square', cursive;
+}
+
+.container h1, .container h3 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 5rem;
+}
+
+.container h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+}
+
+.container {
+    width: 100vw; /* 19.2px */
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(90deg, rgb(7, 200, 0) 0%, rgb(22, 141, 1) 100%);
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #0b8000;
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#highscore-btn {
+    background: linear-gradient(90deg, rgb(255, 247, 9) 0%, rgb(240, 221, 6) 100%);
+    color: #000;
+}
+
+#highscore-btn:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(255,255,0,0.5);
+}
+
+.btn-inline {
+    padding: 2rem 0;
+    color: #ffffff;
+    background: linear-gradient(90deg, rgb(7, 200, 0) 0%, rgb(22, 141, 1) 100%);
+    width: 3.9em;
+    text-align: center;
+    font-size: 50px;
+    display: inline-block;
+}
+
+.btn-inline:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #0b8000;
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.btn-inline[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#home-link {
+    margin-right: 15px;
+}
+
+#mapa-link {
+    margin-left: 15px;
+}
+
+.fa-crown {
+    font-size: 35px;
+    margin-left: 1rem;
+}
+
+.fa-home {
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: rgb(28, 26, 26);
+}
+
+.field-dificuldade {
+    border: none;
+    width: 940px;
+    color: white;
+    text-align: center;
+}
+
+.field-dificuldade legend {
+    color: white;
+    font-size: 25px;
+}
+
+.field-dificuldade select {
+    font-size: 20px;
+    margin: 10px 0 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+
+/*======Jogo======*/
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: rgb(2, 124, 223);
+    font-size: 2rem;
+    min-width: 80rem;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #0067bb;
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+.correct {
+    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);
+}
+
+.incorrect {
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
+}
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgb(11, 223, 36);
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: rgb(11, 223, 36);
+    width: 0%;
+}
+
+
+
+
+/*======Pagina final======*/
+
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+#end input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+
+#end input::placeholder{
+    color: #aaa;
+}
+
+#username {
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: none;
+}
+
+#end-text {
+    font-size: 2.4rem;
+    color: #fff;
+    text-align: center;
+}
+
+#saveScoreBtn {
+    border: none;
+}
+
+
+
+/*======Highscores======*/
+
+#highScoresList {
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+.high-score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .btn {
+        width: 350px;
+    }
+
+    .btn-inline {
+        width: 150px;
+    }
+
+    .choice-container {
+        min-width: 40rem;
+    }
+
+    .container h1 {
+        font-size: 20px;
+        padding: 0 20px;
+        margin: 4rem 0 1rem;
+    }
+
+    .hud-prefix {
+        font-size: 25px;
+    }
+
+    .choice-container {
+        width: 95%;
+        min-width: 0;
+        font-size: 20px;
+        text-align: center;
+        margin: 0 0 1rem 10px;
+    }
+
+    #progressBar {
+        width: 15rem;
+    }
+
+    .container h3 {
+        font-size: 40px;
+        margin: 20px;
+    }
+
+    .hud-item {
+        width: 65%;
+        margin-right: 20px;
+    }
+
+    #finalScore {
+        font-size: 50px;
+    }
+
+    .field-dificuldade {
+        width: auto;
+    }
+}

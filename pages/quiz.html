@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Quiz</title>
+	<link rel="stylesheet" href="../assets/CSS/quiz.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div id="home" class="flex-column flex-center">
+                <form class="form-dificuldade">
+                    <fieldset class="field-dificuldade">
+                        <legend>Diculdade:</legend>
+                        
+                        <select id="dificuldade" onChange="update()">
+                            <option value="facil">Fácil</option>
+                            <option value="medio">Médio</option>
+                            <option value="dificil">Difícil</option>
+                        </select>
+                    </fieldset>
+                </form>
+                <a href="game.html" class="btn">Jogar</a>
+                <a href="highscores.html" id="highscore-btn" class="btn">HighScores <i class="fas fa-crown"></i></a>
+                <div class="display-hm">
+                    <a href="../index.html" id="home-link" class="btn-inline"><i class="fas fa-house-user"></i></a>
+                    <a href="mapa-interativo.html" id="mapa-link" class="btn-inline"><i class="fas fa-globe-americas"></i></i></a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+        </footer>
+
+        <script src="../assets/script/script-quizhome.js"></script>
+    </body> 
+</html>

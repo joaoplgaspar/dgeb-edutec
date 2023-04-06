@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Ubuntu&display=swap');
+
+:root {
+  --branco-principal: #FFFFFF;
+  --cinza-principal: #f1f1f1;
+  --azul-escuro: #00328f;
+  --azul-muito-escuro: #002569;
+  --preto-principal: #101010;
+  --font-principal: 'Roboto Condensed';
+}
+
+body {
+  font-family: var(--font-principal);
+  font-size: 18px;
+}
+
+/*======Header======*/
+
+header {
+  background: rgb(29,59,230);
+background: linear-gradient(102deg, rgba(29,59,230,1) 5%, rgba(78,208,111,1) 66%);
+  border-bottom: 5px solid var(--azul-muito-escuro);
+  color: #ffffff;
+  
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.cabecalho__container {
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cabecalho__container h1{
+  font-size: 2rem;
+}
+
+.cabecalho__container {
+  padding: 25px;
+}
+
+.border__cabecalho {
+  border-bottom: 3px solid var(--azul-muito-escuro);
+}
+
+.nav__container ul {
+  display: flex;
+}
+
+.nav__container a {
+  margin-left: 2em;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--branco-principal);
+  transition: 250ms color;
+}
+
+.nav__container a:hover {
+	color: var(--azul-escuro);
+  text-decoration: underline;
+}
+
+
+
+/*======HOME======*/
+
+.cabecalho__info {
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.container__botoes {
+  display: flex;
+  margin-top: 1em;
+  width: 50%;
+}
+
+.container__imagem {
+  width: 40%;
+  text-align: center;
+}
+
+.container__imagem img {
+  width: 76%;
+}
+
+.botao__pagina {
+  text-decoration: none;
+  background-color: var(--azul-escuro);
+  color: var(--branco-principal);
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-right: 2rem;
+  transition: 500ms;
+}
+
+.botao__pagina:hover {
+  background-color: var(--azul-muito-escuro);
+  transform: scale(1.05);
+}
+
+.cabecalho__texto {
+  width: 60%;
+}
+
+.titulo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.subtitulo {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.container__sobre {
+  margin: 2em auto 4em;
+  color: var(--preto-principal);
+  padding: 10px;
+}
+
+.container__sobre p {
+  margin-top: 15px;
+}
+
+.container__sobre strong {
+  font-weight: bold;
+}
+
+.container__lista {
+  background: var(--azul-escuro);
+  height: 300px;
+  color: var(--branco-principal);
+  padding: 10px;
+}
+
+.lista__index {
+  list-style-type: disc;
+  height: 240px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.lista__index li {
+  font-size: 20px;
+  margin: 0 0 1em 2em;
+}
+
+/*======MapaInterativo======*/
+
+#rolagem {
+  scroll-behavior: smooth;
+}
+
+#mapa-container {
+  padding: 10px;
+  box-shadow: 0 0 5px #5c5c5c;
+  margin-top: 20px;
+}
+
+#mapa-container h2 {
+  padding: 55px 30px;
+  font-weight: bold;
+  text-align: left;
+  font-size: 35px;
+  position: absolute;
+}
+
+#mapa-interativo{
+  margin-top: 10px;
+  display: inline-block;
+}
+
+#svg-map path { 
+  fill:#158f0a;
+  transition: 500ms all;
+}
+
+#svg-map text { 
+  fill:#fff; 
+  font:9px Arial-BoldMT, sans-serif; 
+  font-weight: bold;
+  cursor:pointer; 
+}
+
+#svg-map a{ 
+  text-decoration:none; 
+}
+
+#svg-map a:hover { 
+  cursor:pointer; 
+  text-decoration:none;
+}
+
+#svg-map a:hover path{ 
+  fill:#ffee00 !important;
+}
+
+#svg-map a:hover text {
+  fill: #383838 !important;
+}
+
+#svg-map .circle { 
+  fill:#2a2a2a;
+}
+
+#svg-map a:hover .circle { 
+  fill:#ffee00 !important; 
+  cursor:pointer;
+}
+
+#antigo-container {
+  width: 1280px;
+  text-align: left;
+  margin-top: 50px;
+  color: rgb(47, 47, 47);
+}
+
+#mapa-1709 {
+  display: none;
+  margin-top: 10px;
+}
+
+.mapa-antigo {
+  width: 60%;
+  float: left;
+  margin: 10px 30px 60px 20px;
+  border: 3px solid #0e0e0e;
+}
+
+.info-antigo p {
+  font-size: 18px;
+  padding: 10px;
+}
+
+#botoes {
+  position: relative;
+  vertical-align: top;
+  text-align: right;
+  margin: 3em auto 30px;
+}
+
+.botao {
+  padding: 10px 20px;
+  margin: 0 20px 0 0;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #00580c;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #131313;
+  transition: 500ms all;
+}
+
+.botao:hover {
+  background-color:#00328f;
+  transform: scale(1.2);
+}
+
+#info-brasil {
+  background-color: #cecece;
+  display: flex;
+  padding: 30px;
+  border-radius: 5px;
+  color: rgb(37, 37, 37);
+  margin-top: -330px;
+  margin-left: 50px;
+  position: absolute;
+  box-shadow: inset 0 0 5px 2px #002d81;
+  font-size: 20px;
+}
+
+.lista-brasil li {
+  padding: 5px;
+}
+
+.lista-brasil strong {
+  font-weight: bold;
+}
+
+#legenda-regioes {
+  background-color: #cecece;
+  display: none;
+  padding: 30px;
+  border-radius: 5px;
+  color: rgb(37, 37, 37);
+  margin-top: -300px;
+  margin-left: 200px;
+  position: absolute;
+  box-shadow: inset 0 0 10px 2px #000000;
+}
+
+#legenda-regioes h3 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.legenda {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.legenda-cor {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.leg-norte {
+  background: darkgreen;
+}
+
+.leg-nordeste {
+  background: red;
+}
+
+.leg-centro {
+  background: darkorange;
+}
+
+.leg-sudeste {
+  background: darkblue;
+}
+
+.leg-sul {
+  background: purple;
+}
+
+#iframe {
+  clear: left;
+  display: block;
+  width: 1280px;
+  height: 850px;
+  border-radius: 5px;
+  margin: 50px auto 0 auto;
+  box-shadow: 0 0 10px rgb(71, 71, 71);
+}
+
+
+
+/*======IFRAME======*/
+
+#iframe-body {
+  background: var(--cinza-principal);
+}
+
+.titulo-iframe {
+  font-weight: bold;
+  text-align: center;
+  font-size: 100px;
+  padding: 300px 0 400px 0;
+}
+
+.main-iframe {
+  color: var(--preto-principal);
+  position: relative;
+}
+
+.info-estado {
+  margin: 0 20px 200px;
+  height: 100vh;
+}
+
+.cabecalho-iframe {
+  padding-top: 10px;
+  height: 10em;
+  position: relative;
+}
+
+.cabecalho-iframe h1 {
+  margin: 0;
+  position: absolute;           
+  top: 50%;                         
+  transform: translate(0, -50%);
+  font-size: 40px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.historia {
+  font-size: 18px;
+  margin: 15px 0 20px 0;
+}
+
+.bandeiras {
+  width: 250px;
+  height: 160px;
+  display: block;
+  margin-top: 15px;
+  margin-left: auto; /* Deixar no 260px se for o outro jeito la*/
+  margin-right: auto;
+  position: relative;
+  border: 1px solid #000000;
+}
+
+.lista-cabecalho {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 19px;
+}
+
+.lista-cabecalho ul, .lista-cabecalho li {
+  position: relative;
+	display: inline;
+	margin: 0 0 0 20px;
+}
+
+.lista {
+  list-style-type: disc;
+  height: 240px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.lista li {
+  font-size: 20px;
+  margin-left: 2em;
+}
+
+
+.info-estado strong {
+  font-weight: bold;
+}
+
+.info-estado li {
+  margin-top: 10px;
+}
+
+
+/*======RODAPÉ======*/
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.sr7Logo {
+  width: 5%;
+}
+
+.copyright {
+  color: var(--preto-principal);
+  font-size: 14px;
+}
+
+
+
+/*======MOBILE======*/
+
+@media screen and (max-width: 768px) {
+  .cabecalho__container, .nav__container ul{
+    text-align: center;
+    flex-direction: column;
+    align-items: initial;
+  }
+
+  #svg-map {
+    width: 100%;
+    height: 400px;
+  }
+
+  #legenda-regioes, #info-brasil, #botoes {
+    display: none;
+  }
+  
+  #mapa-container h2 {
+    padding: 10px;
+    position: static;
+  }
+
+  .cabecalho__container {
+    padding: 10px;
+    border: none;
+  }
+
+  .nav__container a {
+    margin: 0;
+  }
+
+  .nav__container li {
+    display: block;
+    padding: 20px 0 5px;
+    border-bottom: 2px solid var(--azul-escuro);
+  }
+
+  .cabecalho__info {
+    height: 50vh;
+  }
+
+  .cabecalho__texto {
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .container__imagem {
+    display: none;
+  }
+
+  .container__botoes {
+    width: 100%;
+    font-size: 17px;
+    justify-content: space-evenly;
+  }
+
+  .botao__pagina {
+    margin-right: 0;
+  }
+  
+  .container__sobre {
+    margin: 2em 1em 4em;
+  }
+  
+  .sr7Logo {
+    width: 20%;
+  }
+
+  .lista {
+    height: auto;
+  }
+
+  #iframe {
+    width: 80%;
+    height: 2000px;
+  }
+
+  .cabecalho-iframe h1 {
+    margin-top: 5px;
+    position: static;
+    transform: none;
+    text-align: center;
+  }
+
+  .bandeiras {
+    position: static;
+  }
+	
+  .lista__index li {
+     margin: 0 0 0.2em 2em;
+  }
+
+  footer {
+    margin-top: 0;
+  }
+}
